@@ -1,0 +1,92 @@
+$Light-Cyan : hsl(193, 38%, 86%);
+$Neon-Green : hsl(150, 100%, 66%);
+$Grayish-Blue: hsl(217, 19%, 38%);
+$Dark-Grayish-Blue: hsl(217, 19%, 24%);
+$Dark-Blue: hsl(218, 23%, 16%);
+$weight : 800;
+$size : 28px;
+
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    text-align: center;
+    background-color: $Dark-Blue;
+    font-family: 'Manrope', sans-serif;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5rem;
+    padding: 2rem 2rem 4rem;
+    background-color: $Dark-Grayish-Blue;
+    width: 34rem;
+    border-radius: 20px;
+    position: relative;
+   
+    h3 {
+        color:$Neon-Green;
+        letter-spacing: 5px;
+        font-weight: $weight;
+        font-size: 15px;
+    }
+    p{
+        padding: 1rem;
+        font-size: $size;
+        color: $Light-Cyan;
+        font-weight: $weight;
+    }
+}
+
+
+button {
+    border-radius: 50%;
+    padding: 1.2rem;
+    background-color: $Neon-Green;
+    border: none;
+    position: absolute;
+    bottom: 0;
+    transform: translateY(50%);
+    width: 4rem;
+    height: 4rem;
+    transition: .2s ease-in-out;
+    img{
+        animation: rotate 3s linear infinite;
+    }
+}
+
+@keyframes rotate {
+0%{
+    rotate: 0deg;
+}
+50%{
+    rotate: 180deg;
+}
+100%{
+    rotate: 360deg;
+}
+}
+
+button:hover {
+    box-shadow: 0 0 1em .25em $Neon-Green,
+    0 0 4em 1em $Neon-Green,
+    inset 0 0 .75em .25em $Neon-Green;
+}
+
+@media (max-width: 768px) {
+    main {
+        width: 80%;
+    }
+}
+
+
+

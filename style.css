@@ -1,0 +1,89 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  text-align: center;
+  background-color: hsl(218deg, 23%, 16%);
+  font-family: "Manrope", sans-serif;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5rem;
+  padding: 2rem 2rem 4rem;
+  background-color: hsl(217deg, 19%, 24%);
+  width: 34rem;
+  border-radius: 20px;
+  position: relative;
+}
+main h3 {
+  color: hsl(150deg, 100%, 66%);
+  letter-spacing: 5px;
+  font-weight: 800;
+  font-size: 15px;
+}
+main p {
+  padding: 1rem;
+  font-size: 28px;
+  color: hsl(193deg, 38%, 86%);
+  font-weight: 800;
+}
+
+button {
+  border-radius: 50%;
+  padding: 1.2rem;
+  background-color: hsl(150deg, 100%, 66%);
+  border: none;
+  position: absolute;
+  bottom: 0;
+  transform: translateY(50%);
+  width: 4rem;
+  height: 4rem;
+  transition: 0.2s ease-in-out;
+}
+button img {
+  -webkit-animation: rotate 3s linear infinite;
+          animation: rotate 3s linear infinite;
+}
+
+@-webkit-keyframes rotate {
+  0% {
+    rotate: 0deg;
+  }
+  50% {
+    rotate: 180deg;
+  }
+  100% {
+    rotate: 360deg;
+  }
+}
+
+@keyframes rotate {
+  0% {
+    rotate: 0deg;
+  }
+  50% {
+    rotate: 180deg;
+  }
+  100% {
+    rotate: 360deg;
+  }
+}
+button:hover {
+  box-shadow: 0 0 1em 0.25em hsl(150deg, 100%, 66%), 0 0 4em 1em hsl(150deg, 100%, 66%), inset 0 0 0.75em 0.25em hsl(150deg, 100%, 66%);
+}
+
+@media (max-width: 768px) {
+  main {
+    width: 80%;
+  }
+}/*# sourceMappingURL=style.css.map */
